@@ -18,3 +18,5 @@ steps:
     git init    
     git remote add -f origin https://$(System.AccessToken)@github.com/JayZuo/pipelines-dotnet-core
     git pull origin $(Build.SourceBranch)
+- script: dotnet build --configuration $(buildConfiguration)
+  displayName: 'dotnet build $(buildConfiguration)'
